@@ -1,0 +1,9 @@
+
+.header, .footer {
+   text-align: center;
+}
+
+#qrcode {
+   position: relative;
+   margin: auto;
+}
