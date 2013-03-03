@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="apple-mobile-web-app-capable" content="yes" />
+   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+   <title>CodeIt</title>
+
+   <link rel="stylesheet" href="jquery.mobile-1.2.0.min.css" />
+   <link rel="stylesheet" href="CodeIt.css" />
+
+   <script src="jquery-1.7.2.min.js"></script>
+   <script src="jquery.mobile-1.2.0.min.js"></script>
+   <script src="qrcode.min.js"></script>
+
+</head>
+<body>
+
+<div id="qrcode_input" data-role="page" data-theme="e">
+
+   <div class="header" data-role="header">
+      <h1>CodeIt</h1>
+   </div>
+
+   <div data-role="content">
+      <label for="text">Text</label>
+      <textarea id="text" name="text" maxlength="1200"
+             cols="20" rows="20" required="true" spellcheck="true"
+             placeholder="Bitte gib den Text ein für den ein QR-Code erstellt werden soll.">
+      </textarea>
+   </div>
+
+   <div data-role="navbar">
+      <ul>
+         <li><a id="show_code" href="#qrcode_output" data-role="button"  data-icon="star">CodeIt</a></li>
+         <li><a href="#all_qrcodes" data-role="button" data-icon="bars">Deine Codes</a></li>
+      </ul>
+   </div>
+
+   <div class="footer" data-role="footer">
+      <p>&copy; DEC</p>
+   </div>
+
+</div>
+
+<div id="qrcode_output" data-role="page" data-theme="e">
+
+   <div class="header" data-role="header">
+      <h1>CodeIt</h1>
+   </div>
+
+   <div data-role="content">
+      <div id="qrcode"></div>
+   </div>
+
+   <div data-role="navbar">
+      <ul>
+         <li><a href="#qrcode_input" data-role="button" data-icon="back">Zurück</a></li>
+         <li><a href="#save_qrcode" data-role="button" data-icon="save">Speichern</a></li>
+         <li><a href="#all_qrcodes" data-role="button" data-icon="bar">Deine Codes</a></li>
+         <li><a id="mail" href="#mail" data-role="button" data-icon="bar">Mail</a></li>
+         <li><a id="print" href="" data-role="button" data-icon="bar">Drucken</a></li>
+      </ul>
+   </div>
+
+   <div class="footer" data-role="footer">
+      <p>&copy; DEC</p>
+   </div>
+
+</div>
+
+<div id="all_qrcodes" data-role="page" data-theme="e">
+
+   <div class="header" data-role="header">
+      <h1>CodeIt</h1>
+   </div>
+
+   <div data-role="content">
+      <ul data-role="listview" data-inset="true" data-filter="true">
+         <li><a href="#">sddsfsdf</a></li>
+      </ul>
+   </div>
+
+   <div data-role="navbar">
+      <ul>
+         <li><a href="#qrcode_input" data-role="button" data-icon="plus">Neu</a></li>
+      </ul>
+   </div>
+
+   <div class="footer" data-role="footer">
+      <p>&copy; DEC</p>
+   </div>
+
+   </div>
+
+
+<script src="CodeIt.js"></script>
+
+</body>
+</html>
