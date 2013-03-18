@@ -3,7 +3,18 @@
    text-align: center;
 }
 
-#qrcode {
-   position: relative;
-   margin: auto;
+/*#text,#qrcode {
+   height: 100px;
+}*/
+
+/*[data-role=page] {
+   height: 100% !important;
+   position:relative !important;
 }
+
+[data-role=footer] {
+   bottom:0;
+   position:absolute !important;
+   top: auto !important;
+   width:100%;
+}*/
