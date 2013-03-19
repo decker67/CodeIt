@@ -9,14 +9,8 @@
         $( '#content' ).height( height );
     } );
 
-
-   $( '#qrcode_output' ).live( 'pagebeforeshow', function() {
-      //center img in page
-      $( '#qrcode img' ).css( { 'margin': '0 auto' } );
-   } );
-
    //handle click on generate qr-code
-   $( '#show_code' ).delegate( '', 'click', function( event ) {
+   $( '#show_code' ).delegate( '', 'vclick', function( event ) {
       event.stopPropagation();
       $( '#qrcode').empty();
       var qrcode = new QRCode( 'qrcode', {
@@ -30,7 +24,7 @@
    } );
 
    //handle click on print
-   $( '#print' ).delegate( '', 'click', function( event ) {
+   $( '#print' ).delegate( '', 'vclick', function( event ) {
       event.stopPropagation();
       window.print();
    } );

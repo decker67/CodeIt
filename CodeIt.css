@@ -3,6 +3,10 @@
    text-align: center;
 }
 
+#qrcode img {
+   margin: 0 auto;
+}
+
 /*#text,#qrcode {
    height: 100px;
 }*/
