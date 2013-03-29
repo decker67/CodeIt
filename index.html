@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="apple-mobile-web-app-capable" content="yes" />
+   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+   <link rel="apple-touch-icon" href="CodeIt57x57.png">
+   <link rel="apple-touch-icon" sizes="114x114" href="CodeIt114x114.png">
+
+   <link rel="apple-touch-startup-image" href="CodeIt.png" />
+
+   <title>CodeIt</title>
+
+   <link rel="stylesheet" href="jquery.mobile-1.2.0.min.css" />
+   <link rel="stylesheet" href="CodeIt.css" />
+   <link rel="stylesheet" href="CodeItPrint.css" media="print" />
+
+   <script src="jquery-1.7.2.min.js"></script>
+   <script src="jquery.mobile-1.2.0.min.js"></script>
+   <script src="qrcode.min.js"></script>
+
+</head>
+
+<body>
+
+<div id="qrcode_input" data-role="page" data-theme="e">
+
+   <div class="header" data-role="header">
+      <h1>CodeIt</h1>
+   </div>
+
+   <div data-role="content">
+      <label for="text">Text</label>
+      <textarea id="text" maxlength="1200"
+       cols="20" rows="5" required="true" spellcheck="true"
+       placeholder="Bitte Text eingeben." ></textarea>
+   </div>
+
+
+   <div id="footer" class="footer" data-role="footer" data-position="fixed">
+      <div id="navbar" data-role="navbar">
+         <ul>
+            <li><a id="show_code" href="#qrcode_output" data-role="button"  data-icon="arrow-r">CodeIt</a></li>
+         </ul>
+      </div>
+
+      <p>&copy; DEC</p>
+   </div>
+
+</div>
+
+<div id="qrcode_output" data-role="page" data-theme="e">
+
+   <div class="header" data-role="header">
+      <h1>CodeIt</h1>
+   </div>
+
+   <div data-role="content">
+      <div id="qrcode"></div>
+   </div>
+
+   <div class="footer" data-role="footer" data-position="fixed">
+      <div data-role="navbar">
+         <ul>
+            <li><a href="#qrcode_input" data-role="button" data-icon="arrow-l">Zurück</a></li>
+            <li><a id="print" href="" data-role="button" data-icon="arrow-r">Drucken</a></li>
+         </ul>
+      </div>
+
+      <p>&copy; DEC</p>
+   </div>
+
+</div>
+
+<script src="CodeIt.js"></script>
+
+</body>
+</html>
